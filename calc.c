@@ -13,12 +13,12 @@ int calculate(int left_operand, char operator, int right_operand)
         case '%': 
             if (right_operand == 0)
             {
-                fprintf(stderr, "Ошибка: деление на ноль.\n");
+                printf(stderr, "Ошибка: деление на ноль.\n");
                 exit(EXIT_FAILURE);
             }
             return left_operand % right_operand;
         default:
-            fprintf(stderr, "Ошибка: некорректный оператор '%c'.\n", operator);
+            printf(stderr, "Ошибка: некорректный оператор '%c'.\n", operator);
             exit(EXIT_FAILURE);
     }
 }
@@ -30,7 +30,7 @@ void decrypt_and_print(int *results, int count, int key)
     char *decrypted_str = (char *)malloc((count + 1) * sizeof(char));
     if (!decrypted_str)
     {
-        fprintf(stderr, "Ошибка выделения памяти.\n");
+        printf(stderr, "Ошибка выделения памяти.\n");
         exit(EXIT_FAILURE);
     }
 
