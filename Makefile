@@ -1,3 +1,4 @@
+//Добавление ложных целей
 .PHONY: clean run
 
 my_program: main.o lab1.o
